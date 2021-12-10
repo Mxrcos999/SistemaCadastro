@@ -27,8 +27,6 @@ namespace dashboard
            int nWidthEllipse,
            int nHeightEllipse
        );
-        public string name { get; set; }
-        public string password { get; set; }
 
         public Frm_UserRegistration()
         {
@@ -36,11 +34,7 @@ namespace dashboard
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
         }
-        public void teste(string Name, string pass)
-        {
-            name = Name;
-            password = pass;
-        }
+     
         private void Frm_UserRegistration_Load(object sender, EventArgs e)
         {
 
