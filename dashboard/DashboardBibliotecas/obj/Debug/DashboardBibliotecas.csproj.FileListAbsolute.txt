@@ -1,0 +1,9 @@
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\bin\Debug\data\Fichario.mdf
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\bin\Debug\data\Fichario_log.ldf
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\bin\Debug\DashboardBibliotecas.dll.config
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\bin\Debug\DashboardBibliotecas.dll
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\bin\Debug\DashboardBibliotecas.pdb
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\obj\Debug\DashboardBibliotecas.csproj.AssemblyReference.cache
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\obj\Debug\DashboardBibliotecas.csproj.CoreCompileInputs.cache
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\obj\Debug\DashboardBibliotecas.dll
+C:\Users\marco\source\repos\dashboard\DashboardBibliotecas\obj\Debug\DashboardBibliotecas.pdb
