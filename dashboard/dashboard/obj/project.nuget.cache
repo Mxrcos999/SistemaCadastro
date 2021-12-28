@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n9G05Y9KScud1FrlIfg4j+FKTB0LxdDvwAhtHoQ55aFHgWXAu/1pJeW/Z4AhUYYX41wPF4Osu/Soxxq4+1R2rQ==",
+  "dgSpecHash": "80mv2AyQnV/WkJ2EbTevlnv/RZO9PVZMecNKtJUeYlCBxUE0hjaPg2ZWaw0oTl0j8z2gTyzu9F/lna7E8U/efw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marco\\source\\repos\\dashboard\\dashboard\\dashboard.csproj",
+  "projectFilePath": "C:\\Users\\marco\\Desktop\\dashbord Backup\\dashboard\\dashboard\\dashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marco\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\entityframework6.npgsql\\6.4.3\\entityframework6.npgsql.6.4.3.nupkg.sha512",

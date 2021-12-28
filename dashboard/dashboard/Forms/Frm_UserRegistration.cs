@@ -59,7 +59,7 @@ namespace dashboard
                     MessageBox.Show("ERR: Enter a valid password", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                else if (_user._status == true)
+                else if (_user.status == true)
                 {
                     MessageBox.Show("Registration successfully Complete! Login to continue", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -71,7 +71,7 @@ namespace dashboard
                 }
                 else
                 {
-                    MessageBox.Show("ERR: Inclusion not allowed because the username is already used", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"ERR: {_user.msg}", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                 }

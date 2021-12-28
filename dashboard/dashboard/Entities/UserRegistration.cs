@@ -13,10 +13,11 @@ using System.Data.SqlClient;
 
 namespace dashboard.utils
 {
-    public class UserRegistration 
+    public class UserRegistration : conexao
     {
         
-        public bool _status { get; set; }
+        public bool status { get; set; }
+        public string msg { get; set; }
 
         [Required(ErrorMessage = "The username field is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Please enter a valid user!")]
@@ -46,47 +47,33 @@ namespace dashboard.utils
                 }
                 throw new ValidationException(sbrErrors.ToString());
             }
-            var enviaDado = new UserDAO(username, password);
-            _status = enviaDado.status;
-        }
 
 
-                /*   public void usuario()
-                   {
-                       //public void Incluir(string Id, string jsonUnit)
-                       //{
-                       //    status = true;
-                       //    try
-                       //    {
-                       //        // INSERT INTO CLIENTE (ID, JSON) VALUES ('000001','{...}')
+            try
+            {
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
 
-                       //        var SQL = "INSERT INTO " + tabela + " (Id, JSON) VALUES ('" + Id + "', '" + jsonUnit + "')";
-                       //        db.SQLCommand(SQL);
-                       //        status = true;
-                       //        mensagem = "Inclusão efetuada com sucesso. Identificador: " + Id;
+                    using (var command = new NpgsqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = $@"insert into usuario (username, password) values ('{username}', '{password}')";
+                        command.CommandType = CommandType.Text;
+                        NpgsqlDataReader reader = command.ExecuteReader();
+                        status = true;
 
-                       //    }
-                       //    catch (Exception ex)
-                       //    {
-                       //        status = false;
-                       //        mensagem = "Conexão com o Fichario com erro: " + ex.Message;
-                       //    }
-                       //}
-                       using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(stringcoon))
-                       {
-                           //Abra a conexão com o PgSQL                  
-                           pgsqlConnection.Open();
-
-                           string cmdInserir = String.Format("Insert Into usuario(1,username,password) values('{0}',{1})", username, password);
-
-                           using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdInserir, pgsqlConnection))
-                           {
-                               pgsqlcommand.ExecuteNonQuery();
-                           }
-                       }
-                   }
-                */
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                msg = ex.Message;
 
             }
+        }
+
     }
+}
     
