@@ -50,18 +50,16 @@ namespace dashboard
         {
             try
             {
-                var _user = new UserRegistration(Txt_UserName.Text, Txt_Passworld.Text);
-        
-                string clienteJson = UserRegistration.SerializedClassUnit(_user);
-                var f = new Fichario(@"C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Fichario");
                 
+                var _user = new UserRegistration();
+                _user.TrataDados(Txt_UserName.Text, Txt_Passworld.Text);
 
-                if((Lbl_ResultPassword.Text == "Inaceitavel" | Lbl_ResultPassword.Text == "Fraca"))
+                if ((Lbl_ResultPassword.Text == "Inaceitavel" | Lbl_ResultPassword.Text == "Fraca"))
                 {
                     MessageBox.Show("ERR: Enter a valid password", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                else if (f.add(Txt_UserName.Text, clienteJson) == true)
+                else if (_user._status == true)
                 {
                     MessageBox.Show("Registration successfully Complete! Login to continue", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -77,7 +75,14 @@ namespace dashboard
 
 
                 }
+                //  _user.usuario();
+                /*
+                        string clienteJson = UserRegistration.SerializedClassUnit(_user);
+                        var f = new Fichario(@"C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Fichario");
 
+
+                
+                     */
             }
             catch (ValidationException Ex)
             {

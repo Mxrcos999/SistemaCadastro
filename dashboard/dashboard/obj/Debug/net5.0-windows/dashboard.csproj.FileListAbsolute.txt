@@ -17,7 +17,6 @@ C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\ref\das
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.pdb
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.genruntimeconfig.cache
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmDashBord.resources
-C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.csproj.AssemblyReference.cache
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmAnalytics.resources
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmCalender.resources
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmContact.resources
@@ -26,3 +25,15 @@ C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboa
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.Frm_Login.resources
 C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.csproj.CopyComplete
 C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\EntityFramework.SqlServer.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\EntityFramework.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\EntityFramework6.Npgsql.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Npgsql.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\marco\source\repos\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.csproj.AssemblyReference.cache

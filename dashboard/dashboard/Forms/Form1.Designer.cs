@@ -45,6 +45,7 @@ namespace dashboard
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.Txt_Search = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.Pnl_Ofc.SuspendLayout();
             this.pnlNav.SuspendLayout();
             this.Pnlla.SuspendLayout();
@@ -75,6 +76,7 @@ namespace dashboard
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlNav.Controls.Add(this.button1);
             this.pnlNav.Controls.Add(this.Btn_Settings);
             this.pnlNav.Controls.Add(this.Btn_Contact);
             this.pnlNav.Controls.Add(this.Btn_Calender);
@@ -89,13 +91,12 @@ namespace dashboard
             // 
             // Btn_Settings
             // 
-            this.Btn_Settings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Btn_Settings.FlatAppearance.BorderSize = 0;
             this.Btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Settings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Btn_Settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Btn_Settings.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Settings.Image")));
-            this.Btn_Settings.Location = new System.Drawing.Point(0, 535);
+            this.Btn_Settings.Location = new System.Drawing.Point(0, 318);
             this.Btn_Settings.Name = "Btn_Settings";
             this.Btn_Settings.Size = new System.Drawing.Size(186, 42);
             this.Btn_Settings.TabIndex = 5;
@@ -253,6 +254,23 @@ namespace dashboard
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "DashBord";
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 535);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Logout";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -292,6 +310,7 @@ namespace dashboard
         private System.Windows.Forms.TextBox Txt_Search;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel PnlFormLoader;
+        private System.Windows.Forms.Button button1;
     }
 }
 

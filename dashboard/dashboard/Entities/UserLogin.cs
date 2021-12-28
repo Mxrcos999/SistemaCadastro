@@ -1,35 +1,64 @@
-﻿using Newtonsoft.Json;
+﻿using dashboard.data;
+using Newtonsoft.Json;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace dashboard.utils
 {
-   public class UserLogin
+    public class UserLogin : conexao
     {
         public string password { get; set; }
-        public string username { get;  set; }
-    
-   
-        public static UserLogin DesSerializedClassUnit(string vJson)
-        {
-            return JsonConvert.DeserializeObject<UserLogin>(vJson);
-        }
+        public string username { get; set; }
 
-        public bool validaSenha(string senhaComparada, string nomeComparado)
-        {
-            if (senhaComparada != password || nomeComparado != username)
-            {
-                return false;
-            }
-            else
-            {
+        public bool status { get; set; }
 
-                return true;
+
+        public void login(string user, string pass)
+        {
+            var sqlQuery = $@"select * from usuario where UserName=@user and Password=@pass";
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                using (var command = new NpgsqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = sqlQuery;
+                    command.Parameters.AddWithValue("@user", user);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+
+                            username = reader.GetString(1);
+                            password = reader.GetString(2);
+
+                        }
+                        if (username == user && password == pass)
+                        {
+                            status = true;
+                        }
+                        else
+                        {
+                            status = false;
+                        }
+                    }
+                 
+            
+                  }
+                }
 
             }
         }
     }
-}
+  

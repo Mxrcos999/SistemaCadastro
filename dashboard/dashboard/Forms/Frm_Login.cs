@@ -30,22 +30,32 @@ namespace dashboard
         private void Btn_Login_Click_1(object sender, EventArgs e)
         { 
             var log = new UserLogin();
-            Fichario F = new Fichario(@"C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Fichario");
-            string clienteJson = F.search(Txt_UserN.Text);
-            log = UserLogin.DesSerializedClassUnit(clienteJson);
+            log.login(Txt_UserN.Text, Txt_Passw.Text);
+            if(log.status == true)
+            {
+                this.Pnl_Login.Controls.Clear();
+                Form1 frmDashboard_vrb = new Form1(log.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
+                Pnl_Login.Controls.Add(frmDashboard_vrb);
+                frmDashboard_vrb.Show();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username or password", "Err", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-            if (log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == true)
-             {
-                 this.Pnl_Login.Controls.Clear();
-                 Form1 frmDashboard_vrb = new Form1(log.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                 frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
-                 Pnl_Login.Controls.Add(frmDashboard_vrb);
-                 frmDashboard_vrb.Show();
-             }
-             else if(log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == false)
-             {
-                 MessageBox.Show("Incorrect username or password", "Err", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-             }
+            }
+            /*    if (log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == true)
+                 {
+                     this.Pnl_Login.Controls.Clear();
+                     Form1 frmDashboard_vrb = new Form1(log.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                     frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
+                     Pnl_Login.Controls.Add(frmDashboard_vrb);
+                     frmDashboard_vrb.Show();
+                 }
+                 else if(log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == false)
+                 {
+                     MessageBox.Show("Incorrect username or password", "Err", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                 }*/
 
 
 

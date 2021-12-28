@@ -52,12 +52,6 @@ namespace dashboard
 
         }
 
-     
-
- 
-
-
-      
 
   
         private void Btn_Calender_Click_1(object sender, EventArgs e)
@@ -82,7 +76,7 @@ namespace dashboard
             pnlNav.Left = Btn_DashBoard.Left;
             Btn_DashBoard.BackColor = Color.FromArgb(46, 51, 73);
 
-            lblTitle.Text = "Dashbord";
+            lblTitle.Text = "DashBord";
             this.PnlFormLoader.Controls.Clear();
 
             FrmDashBord frmDashboard_vrb = new FrmDashBord() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -144,6 +138,9 @@ namespace dashboard
             frmDashboard_vrb.Show();
         }
 
-     
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -52,27 +52,28 @@ namespace dashboard.data
             }
 
         }
-        public string search(string user)
-        {
-            status = true;
-            try
-            {
-                if (!(File.Exists(@$"{diretorio}\{user}.json")))
-                {
-                    status = false;
-                }
-                else
-                {
-                    string conteudo = File.ReadAllText(@$"{diretorio}\{user}.json");
-                    status = true;
-                    return conteudo;
-                }
-            }
-            catch (Exception)
-            {
-                status = false;            }
-            return "";
-        }
+        //public string search(string user)
+        //{
+        //    status = true;
+        //    try
+        //    {
+        //        if (!(File.Exists(@$"{diretorio}\{user}.json")))
+        //        {
+        //            status = false;
+        //        }
+        //        else
+        //        {
+        //            string conteudo = File.ReadAllText(@$"{diretorio}\{user}.json");
+        //            status = true;
+        //            return conteudo;
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        status = false;            }
+        //    return "";
+        //}
+
 
     }
 }
