@@ -53,13 +53,12 @@ namespace dashboard
             this.Pnl_Login.Controls.Add(this.label2);
             this.Pnl_Login.Controls.Add(this.label1);
             this.Pnl_Login.Controls.Add(this.Btn_Login);
-            this.Pnl_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pnl_Login.Cursor = System.Windows.Forms.Cursors.Default;
             this.Pnl_Login.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Login.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Login.Name = "Pnl_Login";
             this.Pnl_Login.Size = new System.Drawing.Size(951, 577);
             this.Pnl_Login.TabIndex = 0;
-            this.Pnl_Login.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Login_Paint_1);
             // 
             // button1
             // 

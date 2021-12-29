@@ -68,7 +68,6 @@ namespace dashboard
             this.Pnl_Register.Name = "Pnl_Register";
             this.Pnl_Register.Size = new System.Drawing.Size(951, 577);
             this.Pnl_Register.TabIndex = 1;
-            this.Pnl_Register.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Register_Paint);
             // 
             // button1
             // 

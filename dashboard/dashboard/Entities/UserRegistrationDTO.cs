@@ -13,11 +13,10 @@ using System.Data.SqlClient;
 
 namespace dashboard.utils
 {
-    public class UserRegistration : conexao
+ 
+    public class UserRegistrationDTO : conexao
     {
         
-        public bool status { get; set; }
-        public string msg { get; set; }
 
         [Required(ErrorMessage = "The username field is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Please enter a valid user!")]
@@ -49,29 +48,7 @@ namespace dashboard.utils
             }
 
 
-            try
-            {
-                using (var connection = GetConnection())
-                {
-                    connection.Open();
-
-                    using (var command = new NpgsqlCommand())
-                    {
-                        command.Connection = connection;
-                        command.CommandText = $@"insert into usuario (username, password) values ('{username}', '{password}')";
-                        command.CommandType = CommandType.Text;
-                        NpgsqlDataReader reader = command.ExecuteReader();
-                        status = true;
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                status = false;
-                msg = ex.Message;
-
-            }
+       
         }
 
     }

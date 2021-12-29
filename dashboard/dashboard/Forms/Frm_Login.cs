@@ -28,13 +28,13 @@ namespace dashboard
    
 
         private void Btn_Login_Click_1(object sender, EventArgs e)
-        { 
-            var log = new UserLogin();
-            log.login(Txt_UserN.Text, Txt_Passw.Text);
-            if(log.status == true)
+        {
+            var log = new UserDAO();
+        
+            if(log.login(Txt_UserN.Text, Txt_Passw.Text))
             {
                 this.Pnl_Login.Controls.Clear();
-                Form1 frmDashboard_vrb = new Form1(log.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                Form1 frmDashboard_vrb = new Form1(Txt_UserN.Text) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                 frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
                 Pnl_Login.Controls.Add(frmDashboard_vrb);
                 frmDashboard_vrb.Show();
@@ -44,19 +44,6 @@ namespace dashboard
                 MessageBox.Show("Incorrect username or password", "Err", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
-            /*    if (log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == true)
-                 {
-                     this.Pnl_Login.Controls.Clear();
-                     Form1 frmDashboard_vrb = new Form1(log.username) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                     frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
-                     Pnl_Login.Controls.Add(frmDashboard_vrb);
-                     frmDashboard_vrb.Show();
-                 }
-                 else if(log.validaSenha(Txt_Passw.Text, Txt_UserN.Text) == false)
-                 {
-                     MessageBox.Show("Incorrect username or password", "Err", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                 }*/
-
 
 
         }
@@ -93,9 +80,6 @@ namespace dashboard
             frmDashboard_vrb.Show();
         }
 
-        private void Pnl_Login_Paint_1(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

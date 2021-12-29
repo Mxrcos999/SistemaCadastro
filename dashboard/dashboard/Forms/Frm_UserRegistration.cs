@@ -51,7 +51,8 @@ namespace dashboard
             try
             {
                 
-                var _user = new UserRegistration();
+                var _user = new UserRegistrationDTO();
+                var dao = new UserDAO();
                 _user.TrataDados(Txt_UserName.Text, Txt_Passworld.Text);
 
                 if ((Lbl_ResultPassword.Text == "Inaceitavel" | Lbl_ResultPassword.Text == "Fraca"))
@@ -59,7 +60,7 @@ namespace dashboard
                     MessageBox.Show("ERR: Enter a valid password", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                else if (_user.status == true)
+                else if (dao.cadastro(Txt_UserName.Text, Txt_Passworld.Text))
                 {
                     MessageBox.Show("Registration successfully Complete! Login to continue", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -71,18 +72,11 @@ namespace dashboard
                 }
                 else
                 {
-                    MessageBox.Show($"ERR: {_user.msg}", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"ERR: Erro desconhecido", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                 }
-                //  _user.usuario();
-                /*
-                        string clienteJson = UserRegistration.SerializedClassUnit(_user);
-                        var f = new Fichario(@"C:\Users\marco\source\repos\dashboard\dashboard\bin\Debug\net5.0-windows\Fichario");
-
-
-                
-                     */
+         
             }
             catch (ValidationException Ex)
             {
@@ -158,9 +152,6 @@ namespace dashboard
             frmDashboard_vrb.Show();
         }
 
-        private void Pnl_Register_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }

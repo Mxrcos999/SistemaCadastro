@@ -11,33 +11,83 @@ namespace dashboard.data
 {
     public class UserDAO : conexao
     {
-        public bool status { get; set; }
-
-        public UserDAO(string user, string pass)
+      
+        public bool cadastro(string user, string pass)
         {
+     
             try
             {
                 using (var connection = GetConnection())
                 {
+
                     connection.Open();
 
                     using (var command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
                         command.CommandText = $@"insert into usuario (username, password) values ('{user}', '{pass}')";
+
+                    
                         command.CommandType = CommandType.Text;
                         NpgsqlDataReader reader = command.ExecuteReader();
-                        status = true;
 
+                        return true;
                     }
                 }
             }
             catch (Exception)
             {
-                status = false;
-
+                return false;
             }
         
+        }
+        public bool login(string user, string pass)
+        {
+            var log = new UserLoginDTO(user, pass);
+            try
+            {
+                using (var connection = GetConnection())
+                {
+
+                    connection.Open();
+
+                    using (var command = new NpgsqlCommand())
+                    {
+                        command.Connection = connection;
+
+                        command.CommandText = $@"select * from usuario where UserName=@user and Password=@pass"; 
+                        command.Parameters.AddWithValue("@user", user);
+                        command.Parameters.AddWithValue("@pass", pass);
+                        command.CommandType = CommandType.Text;
+                        NpgsqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+
+                                log.username = reader.GetString(1);
+                                log.password = reader.GetString(2);
+
+                            }
+                            if (log.username == user && log.password == pass)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+
+                    }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
         }
      
     }

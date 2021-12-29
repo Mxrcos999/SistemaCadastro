@@ -10,27 +10,8 @@ using Npgsql;
 namespace dashboard.data
 {
     public abstract class conexao
-    {
-        public string stringcoon { get; set; }
+    {         
         
-        public string msg { get; set; }
-        public void conectar()
-        {
-           
-            using (NpgsqlConnection con = GetConnection())
-            {
-                con.Open();
-                if(con.State == ConnectionState.Open)
-                {
-                    msg = "Sucesso";
-                }
-                else
-                {
-                    msg = "erro";
-                }
-            }
-        }
-
        public static NpgsqlConnection GetConnection()
         {
             return new NpgsqlConnection($@"Server=127.0.0.1;

@@ -56,7 +56,6 @@ C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\bin\Debug\net5.0-wind
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.csproj.AssemblyReference.cache
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.Form1.resources
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmAnalytics.resources
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.FrmCalender.resources
