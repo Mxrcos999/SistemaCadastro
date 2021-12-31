@@ -11,7 +11,6 @@ namespace dashboard.data
 {
     public class UserDAO : conexao
     {
-        public string msg { get; set; }
 
         public bool verficaUsuarioExistente(string user, string pass)
         {
@@ -54,9 +53,8 @@ namespace dashboard.data
                 }
              
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                msg = ex.Message;
                 return false;
             }
         
