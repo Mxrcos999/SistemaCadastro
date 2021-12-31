@@ -16,8 +16,7 @@ namespace dashboard.utils
  
     public class UserRegistrationDTO : conexao
     {
-        
-
+ 
         [Required(ErrorMessage = "The username field is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Please enter a valid user!")]
         public string username { get;  set; }
@@ -25,7 +24,7 @@ namespace dashboard.utils
         [Required (ErrorMessage = "The password field is required.")]
         [StringLength(8, MinimumLength = 3, ErrorMessage = "Please enter a valid password!")]
 
-        public string password { get; private set; }
+        public string password { get; set; }
 
         public void TrataDados(string user, string pass)
         {

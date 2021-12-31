@@ -75,3 +75,4 @@ C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-wind
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\ref\dashboard.dll
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.pdb
 C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.genruntimeconfig.cache
+C:\Users\marco\Desktop\dashbord Backup\dashboard\dashboard\obj\Debug\net5.0-windows\dashboard.csproj.AssemblyReference.cache

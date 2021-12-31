@@ -60,19 +60,23 @@ namespace dashboard
                     MessageBox.Show("ERR: Enter a valid password", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                else if (dao.cadastro(Txt_UserName.Text, Txt_Passworld.Text))
+                else if (dao.verficaUsuarioExistente(Txt_UserName.Text, Txt_Passworld.Text))
                 {
-                    MessageBox.Show("Registration successfully Complete! Login to continue", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(dao.cadastro(Txt_UserName.Text, Txt_Passworld.Text))
+                    {
+                        MessageBox.Show("Registration successfully Complete! Login to continue", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.Pnl_Register.Controls.Clear();
-                    Frm_Login frmDashboard_vrb = new Frm_Login(Txt_UserName.Text, Txt_Passworld.Text) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                    frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
-                    this.Pnl_Register.Controls.Add(frmDashboard_vrb);
-                    frmDashboard_vrb.Show();
+                        this.Pnl_Register.Controls.Clear();
+                        Frm_Login frmDashboard_vrb = new Frm_Login(Txt_UserName.Text, Txt_Passworld.Text) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                        frmDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
+                        this.Pnl_Register.Controls.Add(frmDashboard_vrb);
+                        frmDashboard_vrb.Show();
+                    }
+            
                 }
                 else
                 {
-                    MessageBox.Show($"ERR: Erro desconhecido", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"ERR: nome de usuario já é usado, tente outro {dao.msg}", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                 }

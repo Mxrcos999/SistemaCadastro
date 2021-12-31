@@ -16,11 +16,11 @@ namespace dashboard.utils
 
         [Required(ErrorMessage = "The password field is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Please enter a valid password!")]
-        public string password { get; set; }
+        public string password {  get;  set; }
        
         [Required(ErrorMessage = "The username field is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Please enter a valid user!")]
-        public string username { get; set; }
+        public string username { get;  set; }
 
         
         public UserLoginDTO(string user, string pass)
